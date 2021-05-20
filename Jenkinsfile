@@ -4,7 +4,7 @@ pipeline {
 			stage('First') {
 				steps {
 					sh '''#!/bin/bash
-						echo "Step One"
+						echo "Step -One"
 					'''
 				}
 			}
@@ -13,7 +13,7 @@ pipeline {
 			stage('Second') {
 				steps {
 					sh '''#!/bin/bash
-						echo "Step Two"
+						echo "Step -Two"
 					'''
 				}
 			} 
@@ -21,7 +21,7 @@ pipeline {
 			stage('Third'){
 				steps {
 					sh '''#!/bin/bash
-						echo "Step Three"
+						echo "Step -Three"
 					'''
 				}
 			}
