@@ -6,12 +6,7 @@ pipeline {
 				 sh '''#!/bin/bash
 					 echo "hello world" 
 				 '''
-			    }
-			    steps {
-				script {
-					env.VARIABLE="value"
-				}
-			    }
+			    }		
 			}
 
 			stage('Second') {
