@@ -7,6 +7,11 @@ pipeline {
 					 echo "hello world" 
 				 '''
 			    }
+			    steps {
+				script {
+					env.VARIABLE="value"
+				}
+			    }
 			}
 
 			stage('Second') {
@@ -17,12 +22,14 @@ pipeline {
 				}
 			} 
 
-			stage('Thirds') {
+			stage('Third') {
 				steps {
 					sh '''#!/bin/bash
 					 echo "hello world" 
-					'''
+					
 				}
 			}
+			
+			
 		}
 }
