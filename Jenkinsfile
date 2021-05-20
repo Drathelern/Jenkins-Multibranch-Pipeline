@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 		stages {
-			stage('One') {
+			stage('First') {
 			    steps {
 				 sh '''#!/bin/bash
 					 echo "hello world" 
@@ -9,7 +9,7 @@ pipeline {
 			    }
 			}
 
-			stage('Two') {
+			stage('Second') {
 				steps {
 					 sh '''#!/bin/bash
 					 echo "hello world" 
@@ -17,7 +17,7 @@ pipeline {
 				}
 			} 
 
-			stage('Three') {
+			stage('Thirds') {
 				steps {
 					sh '''#!/bin/bash
 					 echo "hello world" 
