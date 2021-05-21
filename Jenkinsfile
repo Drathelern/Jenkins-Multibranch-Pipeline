@@ -1,16 +1,14 @@
 pipeline {
 	agent any
 		stages {
-			stage('First') {
-				steps {
-					script {
-						env.EXECUTE = "True"
-					}
-				}
+			stage('First') {			
 				steps {
 					sh '''#!/bin/bash
 						echo "Step -One"
 					'''
+					script {
+						env.EXECUTE = "True"
+					}
 				}
 			}
 
