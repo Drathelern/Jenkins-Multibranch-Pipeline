@@ -1,8 +1,5 @@
 pipeline {
 	agent any
-	environment {
-	        FOO = "bar"
-	}
 		stages {
 			stage('first') {
 				
