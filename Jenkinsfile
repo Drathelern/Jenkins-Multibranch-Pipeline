@@ -1,9 +1,14 @@
 pipeline {
 	agent any
+	environment {
+	        FOO = "bar"
+	}
 		stages {
-			stage('First') {			
+			stage('first') {
+				
+						
 				steps {
-					sh '''#!/bin/bash
+					sh '''
 						echo "Step -One"
 					'''
 					script {
@@ -13,17 +18,27 @@ pipeline {
 			}
 
 
-			stage('Second') {
+			stage('second') {
+				when {
+					expression { EXECUTE == "True"}
+				}
 				steps {
-					sh '''#!/bin/bash
+					sh '''
 						echo "Step -Two"
+						echo "Updating Second Stage"
 					'''
+					script {
+						echo "${EXECUTE}"
+					}
 				}
 			} 
 
-			stage('Third'){
+			stage('third'){
+				when {
+					expression { EXECUTE == "False"}
+				}
 				steps {
-					sh '''#!/bin/bash
+					sh '''
 						echo "Step -Three"
 					'''
 				}
