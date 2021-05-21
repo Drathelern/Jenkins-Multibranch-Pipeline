@@ -1,12 +1,11 @@
 pipeline {
 	agent any
 		stages {
-			stage('first') {
-				
+			stage('first') {			
 						
 				steps {
 					sh '''
-						echo "Step -One"
+						echo "Step One"
 					'''
 					script {
 						env.EXECUTE = "True"
@@ -21,7 +20,7 @@ pipeline {
 				}
 				steps {
 					sh '''
-						echo "Step -Two"
+						echo "Step Two"
 						echo "Updating Second Stage"
 					'''
 					script {
@@ -36,7 +35,7 @@ pipeline {
 				}
 				steps {
 					sh '''
-						echo "Step -Three"
+						echo "Step Three"
 					'''
 				}
 			}
